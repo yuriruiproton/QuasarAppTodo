@@ -2,13 +2,13 @@
   <q-page class="bg-grey-3 column">
     <div class="row q-pg-sm bg-primary">
       <q-input filled v-model="newTask" @keyup.enter="addTask" placeholder="Add task" dense bg-color="white" class="col"
-        square>
+        square >
         <template v-slot:append>
           <q-btn @click='addTask' round dense flat icon="add" />
         </template>
       </q-input>
     </div>
-    <q-list class="bg-white" separator bordered>
+    <q-list class="bg-white" separator bordered >
       <q-item v-ripple v-for="(task, index) in tasks" :key="task.title" @click="task.done = !task.done"
         :class="{ 'done bg-blue-1': task.done }" clickable>
         <q-item-section avatar>
@@ -23,10 +23,10 @@
       </q-item>
     </q-list>
     <div v-if="!tasks.length" class="no-tasks absolute-center">
-      <q-icon name="check" size="100px" color="primary">
+      <q-icon name="check" size="100px" color="lightgrey">
 
       </q-icon>
-      <div class="text-h5 text-primary text-center">
+      <div class="text-h6 text-greenlight text-center">
         No tasks
       </div>
 
@@ -87,10 +87,13 @@ export default defineComponent({
     .q-item__label {
       text-decoration: line-through;
       color: #bbb;
+      border-radius: 30px;
     }
   }
 
   .no-tasks {
-    opacity: 0.5;
+    opacity: 0.6;
+    font-family: 'Times New Roman', Times, serif;
   }
+
   </style>

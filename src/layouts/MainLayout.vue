@@ -6,7 +6,7 @@
       </q-toolbar>
       <div class="q-px-lg q-pt-xl q-mb-md"></div>
       <div>
-        <div class="text-h5">Todo</div>
+        <div class="text-h5">Tasks</div>
         <div class="text-subtitle1">{{ todaysDate }}</div>
       </div>
       <q-img src="../assets/bg.jpg" class="header-image absolute-top" />
@@ -19,7 +19,7 @@
               <q-icon name="list" />
             </q-item-section>
             <q-item-section>
-              Todo
+              Tasks
             </q-item-section>
           </q-item>
           <q-item clickable v-ripple to="/help" exact>
@@ -125,7 +125,16 @@ export default defineComponent({
 .header-image {
   height: 100%;
   z-index: -1;
-  opacity: 0.2;
+  opacity: 0.3;
   filter: grayscale(100%)
+
 }
+.text-h5,.text-subtitle1{
+
+    color: black;
+    padding-left:5px;
+    font-family:'Times New Roman', Times, serif;
+
+}
+
 </style>
